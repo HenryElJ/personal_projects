@@ -1,8 +1,53 @@
 # Author: Henry El-Jawhari
 # Date: Sept. 2022
+
 # Exercises taken from: https://www.practicepython.org
 
+# Exercises
+
+# 1: Character Input
+# 2: Odd Or Even
+# 3: List Less Than Ten
+# 4: Divisors
+# 5: List Overlap
+# 6: String Lists
+# 7: List Comprehensions
+# 8: Rock Paper Scissors
+# 9: Guessing Game One
+# 10: List Overlap Comprehensions
+# 11: Check Primality Functions
+# 12: List Ends
+# 13: Fibonacci
+# 14: List Remove Duplicates
+# 15: Reverse Word Order
+# 16: Password Generator
+# 17: Decode A Web Page
+# 18: Cows And Bulls
+# 19: Decode A Web Page Two
+# 20: Element Search
+# 21: Write To A File
+# 22: Read From File
+# 23: File Overlap
+# 24: Draw A Game Board
+# 25: Guessing Game Two
+# 26: Check Tic Tac Toe
+# 27: Tic Tac Toe Draw
+# 28: Max Of Three
+# 29: Tic Tac Toe Game
+# 30: Pick Word
+# 31: Guess Letters
+# 32: Hangman
+# 33: Birthday Dictionaries
+# 34: Birthday Json
+# 35: Birthday Months
+# 36: Birthday Plots
+# 37: Functions Refactor
+# 38: f Strings
+# 39: Character Input Datetime
+# 40: Error Checking
+
 # Exercise 1 ##################################################
+# Character input #
 
 # Create a program that asks the user to enter their name and their age.
 # Print out a message addressed to them that tells them the year that they will turn 100 years old.
@@ -14,6 +59,7 @@ age = input("Next, please enter your age > ")
 print(f"Hello {name}, you will turn 100 in the year {100 - int(age) + 2022}")
 
 # Exercise 2 ##################################################
+# Odd or even #
 
 # Ask the user for a number.
 # Depending on whether the number is even or odd, print out an appropriate message to the user.
@@ -23,6 +69,7 @@ number = input("Please enter a random number > ")
 print(f'This number is {"even" if int(number) % 2 == 0 else "odd"}')
 
 # Exercise 3 ##################################################
+# List less than ten #
 
 # Take a list, say for example this one:
 
@@ -35,6 +82,7 @@ a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 print([num for num in a if num < 5])
 
 # Exercise 4 ##################################################
+# Divisors #
 
 # Create a program that asks the user for a number and then prints out a list of all the divisors of that number.
 
@@ -51,6 +99,7 @@ for i in range(1, int(number) + 1):
 print(f"Divisors of {number} are: " + str(b))
 
 # Exercise 5 ##################################################
+# List overlap #
 
 # Take two lists, say for example these two:
 
@@ -66,6 +115,7 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 print(list(set([num for num in a if num in b])))
 
 # Exercise 6 ##################################################
+# String lists #
 
 # Ask the user for a string and print out whether this string is a palindrome or not.
 # A palindrome is a string that reads the same forwards and backwards.
@@ -75,6 +125,7 @@ string = input("Please enter a word > ").lower()
 print("This word is a palindrome" if string == string[::-1] else "This word is not a palindrome")
 
 # Exercise 7 ##################################################
+# List comprehensions #
 
 # Let’s say I give you a list saved in a variable:
 
@@ -86,6 +137,7 @@ a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 b = [num for num in a if num % 2 == 0]
 
 # Exercise 8 ##################################################
+# Rock, paper, scissors #
 
 # Make a two-player Rock-Paper-Scissors game.
 # (Hint: Ask for player plays (using input), compare them, print out a message of congratulations to the winner,
@@ -140,6 +192,7 @@ def rps():
 
 
 # Exercise 9 ##################################################
+# Guessing game one #
 
 # Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number,
 # then tell them whether they guessed too low, too high, or exactly right.
@@ -159,6 +212,7 @@ else:
     print("Too high!")
 
 # Exercise 10 ##################################################
+# List overlap comprehensions #
 
 # This week’s exercise is going to be revisiting an old exercise (see Exercise 5),
 # except require the solution in a different way. Take two lists, say for example these two:
@@ -172,6 +226,7 @@ else:
 print(list(set([num for num in a if num in b])))
 
 # Exercise 11 ##################################################
+# Check primality functions #
 
 # Ask the user for a number and determine whether the number is prime or not.
 
@@ -192,6 +247,7 @@ for i in range(1, num + 1):
 print("This number is prime" if len(b) == 2 else "This number is not prime")
 
 # Exercise 12 ##################################################
+# List ends #
 
 # Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25]) and
 # makes a new list of only the first and last elements of the given list.
@@ -206,6 +262,7 @@ def first_last(input_list):
 first_last([5, 10, 15, 20, 25])
 
 # Exercise 13 ##################################################
+# Fibonacci #
 
 # Write a program that asks the user how many Fibonnaci numbers to generate and then generates them.
 # Take this opportunity to think about how you can use functions. Make sure to ask the user to enter
@@ -237,6 +294,7 @@ def fib_seq():
 fib_seq()
 
 # Exercise 14 ##################################################
+# List remove duplicates #
 
 # Write a program (function!) that takes a list and returns a new list that contains all the
 # elements of the first list minus all the duplicates.
@@ -256,6 +314,7 @@ def unique(input_list):
 
 
 # Exercise 15 ##################################################
+# Reverse word order #
 
 # Write a program (using functions!) that asks the user for a long string containing multiple words.
 # Print back to the user the same string, except with the words in backwards order.
@@ -269,6 +328,7 @@ def bckwds_str(string):
 bckwds_str("testing this out for the sake of it")
 
 # Exercise 16 ##################################################
+# Password generator #
 
 # Write a password generator in Python. Be creative with how you generate passwords -
 # strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols.
@@ -289,6 +349,7 @@ def password_generator():
 password_generator()
 
 # Exercise 17 ##################################################
+# Decode a web page #
 
 # Use the BeautifulSoup and requests Python packages to print out a list of all the article titles on the
 # New York Times homepage.
@@ -312,6 +373,7 @@ for story_heading in soup.find_all(class_="indicate-hover"):
 #     print(story_heading.contents[0].strip())
 
 # Exercise 18 ##################################################
+# Cows and bulls #
 
 # Create a program that will play the “cows and bulls” game with the user. The game works like this:
 # Randomly generate a 4-digit number.Ask the user to guess a 4-digit number.
@@ -362,6 +424,7 @@ def play_cow_bull(tries = 1):
 play_cow_bull()
 
 # Exercise 19 ##################################################
+# Decode a web page two #
 
 # Using the requests and BeautifulSoup Python libraries, print to the screen the text of the article on this website:
 # http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture.
@@ -388,6 +451,7 @@ for text_body in soup.find_all(class_="paywall"):
 # print(elem.text)
 
 # Exercise 20 ##################################################
+# Element search #
 
 # Write a function that takes an ordered list of numbers and another number.
 # The function decides whether or not the given number is inside the list and returns an appropriate boolean.
@@ -401,6 +465,7 @@ list_search([1, 2, 3, 4, 5], 5)
 list_search([1, 2, 3, 4, 5], 10)
 
 # Exercise 21 ##################################################
+# Write to a file #
 
 # Take the code from the How To Decode A Website exercise and
 # instead of printing the results to a screen, write the results to a txt file.
@@ -421,6 +486,7 @@ with open("nytimes.txt", "w") as open_file:
 
 
 # Exercise 22 ##################################################
+# Read from a file #
 
 # Given a .txt file that has a list of a bunch of names, count how many of each name there are in the file, and
 # print out the results to the screen. I have a .txt file for you, if you want to use it!
@@ -433,6 +499,7 @@ data = open("names.txt").read().splitlines()
 print(Counter(data))
 
 # Exercise 23 ##################################################
+# File overlap #
 
 # Given two .txt files that have lists of numbers in them, find the numbers that are overlapping.
 # One .txt file has a list of all prime numbers under 1000, the other .txt file has a list of happy numbers up to 1000.
@@ -445,6 +512,7 @@ happy_nums = open("happy_nums.txt").read().splitlines()
 prime_happy_nums = [num for num in prime_nums if num in happy_nums]
 
 # Exercise 24 ##################################################
+# Draw a game board #
 
 # This exercise is Part 1 of 4 of the Tic Tac Toe exercise series.
 # Time for some fake graphics! Let’s say we want to draw game boards that look like this:
@@ -477,6 +545,7 @@ def draw_board():
 draw_board()
 
 # Exercise 25 ##################################################
+# Guessing game two #
 
 # In a previous exercise, we’ve written a program that “knows” a number and asks a user to guess it.
 # This time, we’re going to do exactly the opposite. You, the user, will have in your head a number between 0 and 100.
@@ -519,6 +588,7 @@ def num_guess(x = round(sum([0, 100]) / 2), tries = 1):
 num_guess()
 
 # Exercise 26 ##################################################
+# Check tic tac toe #
 
 # This exercise is Part 2 of 4 of the Tic Tac Toe exercise series.
 # As you may have guessed, we are trying to build up to a full tic-tac-toe board.
@@ -580,6 +650,7 @@ for game in test_games:
     print("*"*10)
 
 # Exercise 27 ##################################################
+# Tic tac toe draw #
 
 # This exercise is Part 3 of 4 of the Tic Tac Toe exercise series.
 # In a previous exercise we explored the idea of using a list of lists as a “data structure”
@@ -661,6 +732,7 @@ while any("·" in check for check in game):
 # We will leave for now, and wait to put everything into functions when we are tasked with putting everything together
 
 # Exercise 28 ##################################################
+# Max of three #
 
 # Implement a function that takes as input three variables, and returns the largest of the three.
 # Do this without using the Python max() function!
@@ -692,6 +764,7 @@ def my_max(arg1, arg2, arg3):
 #             print 'Max value is :',c
 
 # Exercise 29 ##################################################
+# Tic tac toe game #
 
 # The next step is to put all these three components together to make a two-player Tic Tac Toe game!
 # Your challenge in this exercise is to use the functions from those previous exercises all together in the same program
@@ -845,6 +918,7 @@ def tic_tac_toe(move = 1, round_count = 1):
 tic_tac_toe()
 
 # Exercise 30 ##################################################
+# Pick word #
 
 # This exercise is Part 1 of 3 of the Hangman exercise series.
 # The task is to write a function that picks a random word from a list of words from the SOWPODS dictionary.
@@ -871,6 +945,7 @@ import random
 print(random.choice(data))
 
 # Exercise 31 ##################################################
+# Guess letters #
 
 # This exercise is Part 2 of 3 of the Hangman exercise series.
 # In the game of Hangman, a clue word is given by the program that the player has to guess,
@@ -923,6 +998,7 @@ hangman()
 # Otherwise they'll only be able to ever guess < 7 letter words (6 letter words only with "perfect play")
 
 # Exercise 32 ##################################################
+# Hangman #
 
 # This exercise is Part 3 of 3 of the Hangman exercise series.
 
@@ -997,6 +1073,7 @@ def hangman(tries = 0):
 hangman()
 
 # Exercise 33 ##################################################
+# Birthday dictionaries #
 
 # This exercise is Part 1 of 4 of the birthday data exercise series.
 # We will keep track of when our friend’s birthdays are, and be able to find that information based on their name.
@@ -1022,6 +1099,7 @@ b_day = input("Who's birthday do you want to look up? > ")
 print(f"{b_day}'s birthday is {birthdays[b_day].strftime('%B %d %Y')}")
 
 # Exercise 34 ##################################################
+# Birthday JSON #
 
 # This exercise is Part 2 of 4 of the birthday data exercise series.
 # In the previous exercise we created a dictionary of famous scientists’ birthdays.
@@ -1060,6 +1138,7 @@ with open("birthdays.json", "w") as f:
     json.dump(birthdays, f)
 
 # Exercise 35 ##################################################
+# Birthday months #
 
 # This exercise is Part 3 of 4 of the birthday data exercise series.
 
@@ -1081,6 +1160,7 @@ for birthday in list(birthdays.values()):
 print(Counter(bday_months))
 
 # Exercise 36 ##################################################
+# Birthday plots #
 
 # This exercise is Part 4 of 4 of the birthday data exercise series.
 # In the previous exercise we counted how many birthdays there are in each month in our dictionary of birthdays.
@@ -1116,6 +1196,7 @@ p.vbar(x = x, top = y, width = 0.5)
 show(p)
 
 # Exercise 37 ##################################################
+# Functions refactor #
 
 # One area of confusion for new coders is the concept of functions.
 # We will be stretching our functions muscle by refactoring an existing code snippet into using functions.
@@ -1148,6 +1229,7 @@ def draw_board():
 draw_board()
 
 # Exercise 38 ##################################################
+# f strings #
 
 # Implement the same exercise as Exercise 1
 # Print out a message addressed to them that tells them the year that they will turn 100 years old, except use f-strings
@@ -1160,6 +1242,7 @@ age = input("Next, please enter your age > ")
 print(f"Hello {name}, you will turn 100 in the year {100 - int(age) + 2022}")
 
 # Exercise 39 ##################################################
+# Character input datetime #
 
 # Implement the same exercise as Exercise 1
 # Except don’t explicitly write out the year. Use the built-in Python datetime library to make the code you write work
@@ -1172,6 +1255,7 @@ age = input("Next, please enter your age > ")
 print(f"Hello {name}, you will turn 100 in the year {100 - int(age) + datetime.date.today().year}")
 
 # Exercise 40 ##################################################
+# Error checking #
 
 # Given this solution to Exercise 9, modify it to have one level of user feedback:
 # if the user does not enter a number between 1 and 9, tell them.
