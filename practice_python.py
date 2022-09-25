@@ -1262,7 +1262,7 @@ print(f"Hello {name}, you will turn 100 in the year {100 - int(age) + datetime.d
 # Don’t count this guess against the user when counting the number of guesses they used.
 
 # import random
-#
+
 # number = random.randint(1, 9)
 # number_of_guesses = 0
 # while True:
