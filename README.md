@@ -1,2 +1,3 @@
-# personal-projects
-A collection of personal projects and interesting coding problems
+# Personal Projects
+
+A collection of personal projects and interesting coding problems.
