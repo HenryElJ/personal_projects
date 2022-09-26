@@ -6,17 +6,17 @@ A collection of personal projects and interesting coding problems
 
 * Practice Python Questions
 
-	Completed all 40 exercises from \href{Practice Python}{https://www.practicepython.org}
+	Completed all 40 exercises from [Practice Python](https://www.practicepython.org)
 
 ## R
 
 * Project Euler
 
-	Completed first 50 problems from \href{Project Euler}{https://projecteuler.net}
+	Completed first 50 problems from [Project Euler](https://projecteuler.net)
 
 * Numberphile
 
-	Attempting to reconstruct interesting mathematical concepts and code featured in \href{https://www.youtube.com/c/numberphile}{Numberphile} videos, along with other mini-projects (mostly focused on cellular automata)
+	Attempting to reconstruct interesting mathematical concepts and code featured in [Numberphile](https://www.youtube.com/c/numberphile) videos, along with other mini-projects (mostly focused on cellular automata)
 
 * Game of Life Functions
 
@@ -28,7 +28,7 @@ A collection of personal projects and interesting coding problems
 
 * IMD England
 
-	Reconstructing the \href{https://en.wikipedia.org/wiki/Multiple_deprivation_index}{Index of Multiple Deprivation} for England, using open-source data from the Office for National Statistics (ONS).
+	Reconstructing the [Index of Multiple Deprivation](https://en.wikipedia.org/wiki/Multiple_deprivation_index) for England, using open-source data from the Office for National Statistics (ONS).
 
 * Image Transition Function
 
