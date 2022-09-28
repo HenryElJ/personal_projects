@@ -32,8 +32,8 @@ Reconstructing the [Index of Multiple Deprivation](https://en.wikipedia.org/wiki
 
 * Image Transition Function
 
-Function which takes two (b\&w) images and transitions from the first to the second - producing a looping GIF as the output.
+Function which takes two images (b\&w) and transitions from the first to the second - producing a looping GIF as the output.
 
 * Image Cellular Automata
 
-Takes an (b\&w) image and uses it as the starting grid for Game of Life.
+Takes an image (b\&w) and uses it as the starting grid for Game of Life.
