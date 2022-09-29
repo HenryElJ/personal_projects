@@ -4,7 +4,7 @@ A collection of personal projects and interesting coding problems
 
 ## Python
 
-* Practice Python Questions
+### Practice Python Questions
 
 Completed all 40 exercises from [Practice Python](https://www.practicepython.org)
 
