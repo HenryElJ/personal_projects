@@ -1,6 +1,14 @@
 # Featured Highlights
 
-(Note, for cellular automata we have: Dead cell = 0, Alive cell = 1)
+### Cellular automata:
+
+* Dead cell = 0, Alive cell = 1
+
+* Moore neighbourhood = (N, E, S, W, NE, NW, SE, SW)
+
+* Von Neumann neighbourhood = (N, E, S, W)
+
+* Diagonal neighbourhood = (NE, NW, SE, SW)
 
 ## (Two Steps Back) Cellular Automata Depth 200
 
@@ -22,11 +30,11 @@ Here's a selection of the plots produced:
 
 ## Fredkin Replicator
 
-Cellular automata which uses the Von Neumann neighbourhood of cells (i.e. North, East, South West). 
+Cellular automata which uses the Von Neumann neighbourhood of cells. 
 
 ### Rules:
 
-If a cell has an even number of neighbours that are alive, then the cell will turn die. If a cell has an odd number of neighbours that are alive, then it will be alive.
+If a cell has an even number of neighbours that are alive, then the cell will die. If a cell has an odd number of neighbours that are alive, then it will be alive.
 
 <p align="center">
   <img src="/Images/fredkin.gif">
@@ -44,9 +52,11 @@ Starting with a single point in the middle of the grid, and applying our array o
 
 ## Game of Life
 
-Perhaps the most famous example of cellular automata (and my first venture into its coding).
+Perhaps the most famous example of cellular automata (and my first venture into coding it).
 
 ### Rules:
+
+* Using Moore's neighbourhood
 
 * Alive cells with fewer than two live neighbours dies (underpopulation).
 
@@ -56,7 +66,7 @@ Perhaps the most famous example of cellular automata (and my first venture into 
 
 * Dead cells with exactly three live neighbours becomes a live cell (reproduction).
 
-Note: Using Moore's neighbourhood (North, North East, East, South East, South, South West, West, North West)
+Another variation on this is Brian's Brain, which has a transition state from alive to dead cells.
 
 This code culminated in a Shiny App I created where you can create your own Game of Life .gif based on a lexicon of over 700 "shapes."
 
@@ -64,13 +74,13 @@ This code culminated in a Shiny App I created where you can create your own Game
 
 ## Langtons Ant
 
-Cellular automata  which has an arbitrary square is denoted as the "ant"  which can travel in any of the four cardinal directions. Squares on a grid are coloured either black or white based on the ant's route.
+Cellular automata  which has an arbitrary square is denoted as the "ant"  which can travel in any of the four directions (N, E, S, W). Squares on a grid are coloured either black or white based on the ant's route.
 
 ### Rules:
 
-* At a white (dead) square, turn 90° clockwise, flip the colour of the square, move forward one unit.
+* At a white (dead) square, turn 90Â° clockwise, flip the colour of the square, move forward one unit.
 
-* At a black (alive) square, turn 90° counter-clockwise, flip the colour of the square, move forward one unit.
+* At a black (alive) square, turn 90Â° counter-clockwise, flip the colour of the square, move forward one unit.
 
 ![](/Images/Rplot10837.png)
 ![](/Images/Rplot13937.png)
@@ -85,7 +95,7 @@ Similar to Langton's ant.
 
 ### Rules:
 
-* Turn on the spot (by some multiple of 90°)
+* Turn on the spot (by some multiple of 90Â°)
 
 * Change the colour of the square
 
@@ -98,7 +108,7 @@ Similar to Langton's ant.
 
 ## Rock Paper Scissors
 
-Generate a random tri-coloured grid (with each colour corresponding to rock, paper, or scissors). If a cell is surrounded (Moore neighbourhoos) by at least n (threshold you determine e.g. 4) number of cells that "beat" it, then it becomes the colour of that cell (e.g. rock surrounded by at least 4 paper -> the rock cell becomes paper). 
+Generate a random tri-coloured grid (with each colour corresponding to rock, paper, or scissors). If a cell is surrounded (Moore neighbourhood) by at least n (threshold you determine e.g. 4) number of cells that "beat" it, then it becomes the colour of that cell (e.g. rock surrounded by at least 4 paper -> the rock cell becomes paper). 
 
 Iteratively the cellular automata converges into a repeating spiral motion.
 
