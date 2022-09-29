@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import re
 import json
 import time
+import re
 
 # Sumo Bashos occur every odd month and are 15 days long
 # Let's look back over the past 5 years
@@ -59,16 +59,28 @@ end_time = time.time()
 elapsed_time = (end_time - start_time)/60
 print(str(round(elapsed_time, 1)) + " mins elapsed") # ~9 mins
 
+# Inspect
 print(sumo_database["201701-1"])
 print(sumo_database["202209-1"])
 
-# Formatting of table changed (subtly), therefore do in post
-# re.sub('(-\d+\))', r'\1 ',  # Add space )Here
-# re.sub('(\d+-\d+ )', r' \1',  # Add space Here1-0
-
-# Probably better to do as JSON
+# Export as JSON
 with open("sumo_database_raw.json", "w") as f:
     json.dump(sumo_database, f)
 
 # with open("sumo_database.json", "r") as f:
 # sumo_database = json.load(f)
+
+# Formatting of table is (subtly) inconsistent, therefore do in post
+
+# re.sub('(-\d+\))', r'\1 ',  # Add space )Here
+# re.sub('(\d+-\d+ )', r' \1',  # Add space Here1-0
+
+# Also need to explore how to properly tabulate this data. Currently data looks like this:
+
+# 201701-1
+# ['Makuuchi', 'Y1e Kakuryu1-0 (5-6-4)uwatedashinage20-1 (23-4)K1w Tochinoshin0-1 (0-6-9)',...,
+# 'M15e Chiyoo0-1 (7-8)utchari0-4 (3-5)M16e Osunaarashi1-0 (4-11)']
+
+# 202209-1
+# ['Makuuchi', 'Y1e Terunofuji1-0 (5-5-5)yorikiri9-0K2w Kiribayama0-1 (9-6)',...,
+# 'J1e Shimanoumi0-1 (4-11)yorikiri0-1M16w Hiradoumi1-0 (7-8)']
