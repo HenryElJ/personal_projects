@@ -14,8 +14,10 @@ For example, if your rule array is rule[1,0,0,0,0,1,0,1,1,0,1] and the cell has 
 
 Here's a selection of the plots produced:
 
-![](Images/two_steps_back_1.jpg?raw=true)
+![](/Images/two_steps_back_1.jpg?raw=true)
+
 ![](two_steps_back_2.jpg)
+
 ![](two_steps_back_3.jpg)
 
 ## Fredkin Replicator
