@@ -2,17 +2,17 @@
 
 ### Cellular automata:
 
-* Dead cell = 0, Alive cell = 1
+* Dead cell = 0, Alive cell = 1.
 
-* Moore neighbourhood = (N, E, S, W, NE, NW, SE, SW)
+* Moore neighbourhood = (N, E, S, W, NE, NW, SE, SW).
 
-* Von Neumann neighbourhood = (N, E, S, W)
+* Von Neumann neighbourhood = (N, E, S, W).
 
-* Diagonal neighbourhood = (NE, NW, SE, SW)
+* Diagonal neighbourhood = (NE, NW, SE, SW).
 
 ## (Two Steps Back) Cellular Automata Depth 200
 
-Inspiration taken from [Softolofy's Blog - Two Step Back Cellular Automata](https://softologyblog.wordpress.com/2018/01/27/two-steps-back-cellular-automata) (which in turn was inspired by [Charlie Deck BigBlueBoo's Tumblr](https://bigblueboo.tumblr.com/post/109303390974/cellular-automata-alien-life-this-rule-takes-the))
+Inspiration taken from [Softolofy's Blog - Two Step Back Cellular Automata](https://softologyblog.wordpress.com/2018/01/27/two-steps-back-cellular-automata) (which in turn was inspired by [Charlie Deck BigBlueBoo's Tumblr](https://bigblueboo.tumblr.com/post/109303390974/cellular-automata-alien-life-this-rule-takes-the)).
 
 ### Rules:
 
@@ -42,7 +42,7 @@ If a cell has an even number of neighbours that are alive, then the cell will di
 
 ## Samasta Mandala
 
-Inspiration taken from [Github: Derstefan's SamastaMandala](https://github.com/Derstefan/SamastaMandala)
+Inspiration taken from [Github: Derstefan's SamastaMandala](https://github.com/Derstefan/SamastaMandala).
 
 Starting with a single point in the middle of the grid, and applying our array of rules (as seen with the two steps back cellular automata) for diagonal, Moore, and Von Neumann neighbourhoods.
 
@@ -56,7 +56,7 @@ Perhaps the most famous example of cellular automata (and my first venture into 
 
 ### Rules:
 
-* Using Moore's neighbourhood
+* Using Moore's neighbourhood.
 
 * Alive cells with fewer than two live neighbours dies (underpopulation).
 
@@ -78,9 +78,9 @@ Cellular automata  which has an arbitrary square is denoted as the "ant"  which 
 
 ### Rules:
 
-* At a white (dead) square, turn 90° clockwise, flip the colour of the square, move forward one unit.
+* At a white (dead) square, turn 90 degrees clockwise, flip the colour of the square, move forward one unit.
 
-* At a black (alive) square, turn 90° counter-clockwise, flip the colour of the square, move forward one unit.
+* At a black (alive) square, turn 90 degrees counter-clockwise, flip the colour of the square, move forward one unit.
 
 ![](/Images/Rplot10837.png)
 ![](/Images/Rplot13937.png)
@@ -95,9 +95,9 @@ Similar to Langton's ant.
 
 ### Rules:
 
-* Turn on the spot (by some multiple of 90°)
+* Turn on the spot (by some multiple of 90 degrees).
 
-* Change the colour of the square
+* Change the colour of the square.
 
 * Move forward one square.
 
