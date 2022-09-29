@@ -6,7 +6,7 @@ A collection of personal projects and interesting coding problems.
 
 ### Practice Python Questions
 
-Completed all 40 exercises from [Practice Python](https://www.practicepython.org).
+Completed all 40 exercises from [Practice Python](https://www.practicepython.org){:target="_blank"}.
 
 ### Sumo Database
 
