@@ -6,7 +6,7 @@
 
 Inspiration taken from [Softolofy's Blog - Two Step Back Cellular Automata](https://softologyblog.wordpress.com/2018/01/27/two-steps-back-cellular-automata) (which in turn was inspired by [Charlie Deck BigBlueBoo's Tumblr](https://bigblueboo.tumblr.com/post/109303390974/cellular-automata-alien-life-this-rule-takes-the))
 
-Rules:
+### Rules:
 
 "Each cell is updated by counting the neighbours 2 cells either side of it and itself (5 cells) and the same 5 cells in the previous generation. This gives you a possible count of active cells between 0 and 10. The count is used into a rule array for the new cell state.
 
@@ -24,7 +24,7 @@ Here's a selection of the plots produced:
 
 Cellular automata which uses the Von Neumann neighbourhood of cells (i.e. North, East, South West). 
 
-Rules:
+### Rules:
 
 If a cell has an even number of neighbours that are alive, then the cell will turn die. If a cell has an odd number of neighbours that are alive, then it will be alive.
 
@@ -46,15 +46,15 @@ Starting with a single point in the middle of the grid, and applying our array o
 
 Perhaps the most famous example of cellular automata (and my first venture into its coding).
 
-Rules:
+### Rules:
 
-Alive cells with fewer than two live neighbours dies (underpopulation).
+* Alive cells with fewer than two live neighbours dies (underpopulation).
 
-Alive cells with two or three live neighbours lives.
+* Alive cells with two or three live neighbours lives.
 
-Alive cells with more than three live neighbours dies (overpopulation).
+* Alive cells with more than three live neighbours dies (overpopulation).
 
-Dead cells with exactly three live neighbours becomes a live cell (reproduction).
+* Dead cells with exactly three live neighbours becomes a live cell (reproduction).
 
 Note: Using Moore's neighbourhood (North, North East, East, South East, South, South West, West, North West)
 
@@ -66,11 +66,11 @@ This code culminated in a Shiny App I created where you can create your own Game
 
 Cellular automata  which has an arbitrary square is denoted as the "ant"  which can travel in any of the four cardinal directions. Squares on a grid are coloured either black or white based on the ant's route.
 
-Rules:
+### Rules:
 
-At a white (dead) square, turn 90° clockwise, flip the colour of the square, move forward one unit.
+* At a white (dead) square, turn 90° clockwise, flip the colour of the square, move forward one unit.
 
-At a black (alive) square, turn 90° counter-clockwise, flip the colour of the square, move forward one unit.
+* At a black (alive) square, turn 90° counter-clockwise, flip the colour of the square, move forward one unit.
 
 ![](/Images/Rplot10837.png)
 ![](/Images/Rplot13937.png)
@@ -83,13 +83,13 @@ At a black (alive) square, turn 90° counter-clockwise, flip the colour of the sq
 
 Similar to Langton's ant.
 
-Rules:
+### Rules:
 
-Turn on the spot (by some multiple of 90°)
+* Turn on the spot (by some multiple of 90°)
 
-Change the colour of the square
+* Change the colour of the square
 
-Move forward one square.
+* Move forward one square.
 
 ![](/Images/Standard.png)
 ![](/Images/Highway.png)
