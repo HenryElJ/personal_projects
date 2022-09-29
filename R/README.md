@@ -14,11 +14,9 @@ For example, if your rule array is rule[1,0,0,0,0,1,0,1,1,0,1] and the cell has 
 
 Here's a selection of the plots produced:
 
-<img src = "/Images/two_steps_back_1.jpg" width = "100">
-
-![](/Images/two_steps_back_2.jpg)
-
-![](/Images/two_steps_back_3.jpg)
+<img src = "/Images/two_steps_back_1.jpg" width = "500">
+<img src = "/Images/two_steps_back_2.jpg" width = "500">
+<img src = "/Images/two_steps_back_3.jpg" width = "500">
 
 ## Fredkin Replicator
 
@@ -105,10 +103,10 @@ Iteratively the cellular automata converges into a repeating spiral motion.
 
 Cellular automaton starting with a finite grid and n number of grains placed all in the centre cell (called a slope). This slope builds up as "grains of sand" pile, until the slope exceeds a specific threshold value (e.g. 4) at which time that site collapses transferring sand into the adjacent sites (Von Neumann neighbourhood), increasing their slope. This then repeats.
 
-![](/Images/Sandpile_1e6.png)
+<img src = "/Images/Sandpile_1e6.png" width = "1000">
 
 ## Image Coding
 
 Takes two black and white images (one as "start", the other as "end"), determines the range of greyscale colour values for each (creating a map of pixels and their values) and iteratively changes the pixels to shift in the direction from "start" to "end."
 
-![](/Images/transition_50fps.gif)
+<img src = "/Images/transition_50fps.gif" width = "1000">
