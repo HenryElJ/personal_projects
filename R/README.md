@@ -14,7 +14,7 @@ For example, if your rule array is rule[1,0,0,0,0,1,0,1,1,0,1] and the cell has 
 
 Here's a selection of the plots produced:
 
-![](/Images/two_steps_back_1.jpg | width = 100)
+<img src = "/Images/two_steps_back_1.jpg" width = "100">
 
 ![](/Images/two_steps_back_2.jpg)
 
@@ -36,7 +36,7 @@ Inspiration taken from [Github: Derstefan's SamastaMandala](https://github.com/D
 
 Starting with a single point in the middle of the grid, and applying our array of rules (as seen with the two steps back cellular automata) for diagonal, Moore, and Von Neumann neighbourhoods.
 
-![](/Images/Rule 72 - 011000111.gif)
+![]("/Images/Rule 72 - 011000111.gif")
 
 ## Game of Life
 
@@ -90,7 +90,7 @@ Move forward one square.
 ![](/Images/Standard.png)
 ![](/Images/Highway.png)
 ![](/Images/Chaotic.png)
-![](/Images/Expanding Frame.png)
+![]("/Images/Expanding Frame.png")
 
 ## Rock Paper Scissors
 
@@ -98,8 +98,8 @@ Generate a random tri-coloured grid (with each colour corresponding to rock, pap
 
 Iteratively the cellular automata converges into a repeating spiral motion.
 
-![](/Images/Rock Paper Scissors.gif.gif)
-![](/Images/Rock Paper Scissors Lizard Spock.gif)
+![]("/Images/Rock Paper Scissors.gif")
+![]("/Images/Rock Paper Scissors Lizard Spock.gif")
 
 ## Sandpiles
 
