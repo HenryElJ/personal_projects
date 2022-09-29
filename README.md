@@ -10,6 +10,8 @@ Completed all 40 exercises from [Practice Python](https://www.practicepython.org
 
 ## R
 
+**Please see R/README.md for Featured Highlights of the code described below.**
+
 * Project Euler
 
 Completed first 50 problems from [Project Euler](https://projecteuler.net)
