@@ -8,6 +8,10 @@ A collection of personal projects and interesting coding problems
 
 Completed all 40 exercises from [Practice Python](https://www.practicepython.org)
 
+### Sumo Database
+
+Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the daily basho (i.e. tournament) results over the past five years (2017-01 to 2022-09). Exported as a JSON file (sumo_database_raw.json).
+
 ## R
 
 **Please see R/README.md for Featured Highlights of the code described below.**
