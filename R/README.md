@@ -14,11 +14,11 @@ For example, if your rule array is rule[1,0,0,0,0,1,0,1,1,0,1] and the cell has 
 
 Here's a selection of the plots produced:
 
-![](/Images/two_steps_back_1.jpg?raw=true)
+![](/Images/two_steps_back_1.jpg | width = 100)
 
-![](two_steps_back_2.jpg)
+![](/Images/two_steps_back_2.jpg)
 
-![](two_steps_back_3.jpg)
+![](/Images/two_steps_back_3.jpg)
 
 ## Fredkin Replicator
 
@@ -28,7 +28,7 @@ Rules:
 
 If a cell has an even number of neighbours that are alive, then the cell will turn die. If a cell has an odd number of neighbours that are alive, then it will be alive.
 
-![](fredkin.gif)
+![](/Images/fredkin.gif)
 
 ## Samasta Mandala
 
@@ -36,7 +36,7 @@ Inspiration taken from [Github: Derstefan's SamastaMandala](https://github.com/D
 
 Starting with a single point in the middle of the grid, and applying our array of rules (as seen with the two steps back cellular automata) for diagonal, Moore, and Von Neumann neighbourhoods.
 
-![](Images/Rule 72 - 011000111.gif)
+![](/Images/Rule 72 - 011000111.gif)
 
 ## Game of Life
 
@@ -68,12 +68,12 @@ At a white (dead) square, turn 90° clockwise, flip the colour of the square, mov
 
 At a black (alive) square, turn 90° counter-clockwise, flip the colour of the square, move forward one unit.
 
-![](Rplot10837.png)
-![](Rplot13937.png)
-![](Rplot123157.png)
-![](Rplot70273.png)
-![](Rplot36437.png)
-![](Rplot32734.png)
+![](/Images/Rplot10837.png)
+![](/Images/Rplot13937.png)
+![](/Images/Rplot123157.png)
+![](/Images/Rplot70273.png)
+![](/Images/Rplot36437.png)
+![](/Images/Rplot32734.png)
 
 ## Turmite
 
@@ -87,10 +87,10 @@ Change the colour of the square
 
 Move forward one square.
 
-![](Standard.png)
-![](Highway.png)
-![](Chaotic.png)
-![](Expanding Frame.png)
+![](/Images/Standard.png)
+![](/Images/Highway.png)
+![](/Images/Chaotic.png)
+![](/Images/Expanding Frame.png)
 
 ## Rock Paper Scissors
 
@@ -98,17 +98,17 @@ Generate a random tri-coloured grid (with each colour corresponding to rock, pap
 
 Iteratively the cellular automata converges into a repeating spiral motion.
 
-![](Rock Paper Scissors.gif.gif)
-![](Rock Paper Scissors Lizard Spock.gif)
+![](/Images/Rock Paper Scissors.gif.gif)
+![](/Images/Rock Paper Scissors Lizard Spock.gif)
 
 ## Sandpiles
 
 Cellular automaton starting with a finite grid and n number of grains placed all in the centre cell (called a slope). This slope builds up as "grains of sand" pile, until the slope exceeds a specific threshold value (e.g. 4) at which time that site collapses transferring sand into the adjacent sites (Von Neumann neighbourhood), increasing their slope. This then repeats.
 
-![](Sandpile_1e6.png)
+![](/Images/Sandpile_1e6.png)
 
 ## Image Coding
 
 Takes two black and white images (one as "start", the other as "end"), determines the range of greyscale colour values for each (creating a map of pixels and their values) and iteratively changes the pixels to shift in the direction from "start" to "end."
 
-![](transition_50fps.gif)
+![](/Images/transition_50fps.gif)
