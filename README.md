@@ -22,11 +22,11 @@ Attempting to reconstruct interesting mathematical concepts and code featured in
 
 ### Game of Life Functions
 
-Necessary functions used to run Game of Life
+Necessary functions used to run [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 ### Game of Life
 
-Wrapper to run Game of Life
+Wrapper to run [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 ### IMD England
 
