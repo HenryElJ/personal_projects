@@ -14,9 +14,11 @@ For example, if your rule array is rule[1,0,0,0,0,1,0,1,1,0,1] and the cell has 
 
 Here's a selection of the plots produced:
 
-<img src = "/Images/two_steps_back_1.jpg" width = "300">
-<img src = "/Images/two_steps_back_2.jpg" width = "300">
-<img src = "/Images/two_steps_back_3.jpg" width = "300">
+<p align="center">
+	<img src = "/Images/two_steps_back_1.jpg" width = "300">
+	<img src = "/Images/two_steps_back_2.jpg" width = "300">
+	<img src = "/Images/two_steps_back_3.jpg" width = "300">
+</p>
 
 ## Fredkin Replicator
 
@@ -26,7 +28,9 @@ Rules:
 
 If a cell has an even number of neighbours that are alive, then the cell will turn die. If a cell has an odd number of neighbours that are alive, then it will be alive.
 
-![](/Images/fredkin.gif)
+<p align="center">
+  <img src="/Images/fredkin.gif">
+</p>
 
 ## Samasta Mandala
 
@@ -34,7 +38,9 @@ Inspiration taken from [Github: Derstefan's SamastaMandala](https://github.com/D
 
 Starting with a single point in the middle of the grid, and applying our array of rules (as seen with the two steps back cellular automata) for diagonal, Moore, and Von Neumann neighbourhoods.
 
-![](/Images/Rule_72_011000111.gif)
+<p align="center">
+  <img src="/Images/Rule_72_011000111.gif">
+</p>
 
 ## Game of Life
 
@@ -88,7 +94,7 @@ Move forward one square.
 ![](/Images/Standard.png)
 ![](/Images/Highway.png)
 ![](/Images/Chaotic.png)
-![]("/Images/Expanding_Frame.png")
+![](/Images/Expanding_Frame.png)
 
 ## Rock Paper Scissors
 
@@ -96,17 +102,23 @@ Generate a random tri-coloured grid (with each colour corresponding to rock, pap
 
 Iteratively the cellular automata converges into a repeating spiral motion.
 
-![](/Images/Rock_Paper_Scissors.gif)
-![](/Images/Rock_Paper_Scissors_Lizard Spock.gif)
+<p align="center">
+  <img src="/Images/Rock_Paper_Scissors.gif">
+  <img src="/Images/Rock_Paper_Scissors_Lizard_Spock.gif">
+</p>
 
 ## Sandpiles
 
 Cellular automaton starting with a finite grid and n number of grains placed all in the centre cell (called a slope). This slope builds up as "grains of sand" pile, until the slope exceeds a specific threshold value (e.g. 4) at which time that site collapses transferring sand into the adjacent sites (Von Neumann neighbourhood), increasing their slope. This then repeats.
 
-<img src = "/Images/Sandpile_1e6.png" width = "500">
+<p align="center">
+	<img src = "/Images/Sandpile_1e6.png" width = "500">
+</p>
 
 ## Image Coding
 
 Takes two black and white images (one as "start", the other as "end"), determines the range of greyscale colour values for each (creating a map of pixels and their values) and iteratively changes the pixels to shift in the direction from "start" to "end."
 
-<img src = "/Images/transition_50fps.gif" width = "500">
+<p align="center">
+	<img src = "/Images/transition_50fps.gif" width = "500">
+</p>
