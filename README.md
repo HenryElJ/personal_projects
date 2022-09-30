@@ -10,7 +10,15 @@ Completed all 40 exercises from [Practice Python](https://www.practicepython.org
 
 ### Sumo Database
 
-Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the daily basho (i.e. tournament) matches and their results from 1958 - present. Data has been exported as two JSON files *sumo_database_matches* and *sumo_database_results*, and the csv *sumo_database_195801_202209*. This is useful as there currently doesn't exist any tabulated data for this large a collection of results (only done by day or by basho).
+Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the daily basho (i.e. tournament) matches and their results from 1958 - present. Data has been exported as:
+
+* *sumo_database_matches.json* - match details
+
+* *sumo_database_results.json* - win/loss/draw results
+
+* *sumo_database_195801_202209.csv* - complete cleaned and tabulated match details and results
+
+This is useful as there currently doesn't exist any tabulated data for this large a collection of results (only done by day or by basho).
 
 ## R
 
