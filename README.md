@@ -18,7 +18,7 @@ Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the 
 	
 		* Year and month
 		* Name
-		* Number of days of basho
+		* Number of days
 		* Matches
 		* Match results
 		* Overall tournament results
