@@ -10,11 +10,27 @@ Completed all 40 exercises from [Practice Python](https://www.practicepython.org
 
 ### Sumo Database
 
-Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the daily basho (i.e. tournament) matches and their results from  1909 - present. Data has been exported as both the JSON and cleaned + tabulated CSV:
+Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the banzuke (overall tournament results) and torikumi (daily basho results). Data has been exported as both the JSON and cleaned + tabulated CSV:
 
-* *sumo_database_full.json*
+* **sumo_database_full.json**
 
-* *sumo_database_full.csv*
+	* Full data dictionary containing:
+	
+		* Year and month
+		* Name
+		* Number of days of basho
+		* Matches
+		* Match results
+		* Overall tournament results
+		* Rikishi (sumo wrestler) stats
+
+* **sumo_maches_full.csv**
+
+	* Containing the results of all sumo matches from 1909-06 to 2022-09 (makuuchi division only).
+
+* **sumo_banzuke_full.csv**
+
+	* Containing the results of all sumo tournaments from 1757-10 to 2022-09 (all divisions up to 1909-01, makuuchi division only from 1909-06 to 2022-09), and rikishi (sumo wrestler) stats.
 
 This is useful as there currently doesn't exist any tabulated data for this large a collection of results (only done by day or by basho).
 
