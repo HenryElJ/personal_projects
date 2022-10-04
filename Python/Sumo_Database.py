@@ -1,6 +1,7 @@
 
 import requests, json, time, re, pandas as pd
 from bs4 import BeautifulSoup
+from collections import Counter
 
 # https://sumodb.sumogames.de/Default.aspx
 # https://en.wikipedia.org/wiki/Glossary_of_sumo_terms
@@ -13,7 +14,8 @@ from bs4 import BeautifulSoup
 # Torikumi (i.e. daily) records begin 1909 Natsu. Banzuke (i.e. overall) records begin 1757 Fuyu
 
 # Define our sumo database as an empty dictionary keys for what we want to web-scrape
-sumo_database = {"years_months": [], "days": [], "basho_names": [], "matches": {}, "results": {}, "banzuke": {}}
+sumo_database = {"years_months": [], "days": [], "basho_names": [], "matches": {}, "results": {}, "banzuke": {},
+                 "win_loss_matrix": {}}
 
 
 # Define our generice webscraping function
@@ -158,11 +160,15 @@ for key in sumo_database["matches"].keys():
         continue
     # Append our key + matches + results together, append to our list
     else:
+        # Need index as using both "matches" and "results"
         for i in range(len(sumo_database["matches"][key])):
             sumo_matches.append((key + "," +
                                  sumo_database["matches"][key][i] + "," +
                                  sumo_database["results"][key][i]
                                  ).split(","))
+
+# Last line can be done much simpler, no?
+# sumo_matches.append([key] + sumo_database["matches"][key][i] + sumo_database["results"][key][i])
 
 # Convert this list into a dataframe
 sumo_matches = pd.DataFrame(sumo_matches)
@@ -252,10 +258,6 @@ end_time = time.time()
 print(str(round((end_time - start_time)/60, 1)) + " mins elapsed")
 # 23.2 mins elapsed
 
-# Write full dictionary to JSON
-with open("sumo_database_full.json", "w") as f:
-    json.dump(sumo_database, f)
-
 # Create index excluding first banzuke (we will need to manually add the missing "previous" columns)
 index = list(sumo_database["banzuke"].keys())
 index.remove("175710")
@@ -269,6 +271,9 @@ for key in index:
         for i in range(len(sumo_database["banzuke"][key])):
             # Append key and banzuke results
             sumo_banzuke.append([key] + sumo_database["banzuke"][key][i])
+
+ # sumo_matches.append((key + "," + sumo_database["matches"][key][i] + "," + sumo_database["results"][key][i]).split(","))
+
 
 # Convert list to dataframe
 sumo_banzuke = pd.DataFrame(sumo_banzuke)
@@ -314,3 +319,97 @@ sumo_banzuke = sumo_banzuke[~sumo_banzuke["rank"].isin(no_rank)].append(temp).so
 
 # Write to csv
 sumo_banzuke.to_csv("sumo_banzuke_full.csv", index=False)
+
+# Makuuchi Win Loss Matrix
+# Won Loss Matrices seem sporadic
+# If Error 404 persists after 200 attempts, then fill as None
+
+start_time = time.time()
+for year_month in sumo_database["years_months"]:
+
+    print(year_month)
+
+    url = f"https://sumodb.sumogames.de/scgroup_matrix.aspx?b={year_month}"
+
+    r = requests.get(url)
+
+    error_count = 0
+    while not r.ok and error_count < 200:
+        error_count += 1
+        print(f"Error 404: {error_count} attempts", end="\r")
+        r = requests.get(url)
+
+    if error_count >= 200:
+        print("Access failed")
+        sumo_database["win_loss_matrix"][year_month] = None
+        continue
+
+    print("Access okay")
+    soup = BeautifulSoup(r.text, features="html.parser")
+
+    data = []
+    table = soup.find("table", attrs={"class": "makuuchimatrix"})
+    rows = table.find_all("tr")
+
+    for row in rows:
+        # Get elements which contain text of table
+        cols_text = row.find_all("td")
+        # Get elements which contain images of table (wins/losses/absences are images)
+        cols_img = row.find_all("img")
+        # Extract text
+        text = [x.get_text() for x in cols_text]
+        # Extract images as wins/losses/absences
+        img = [x["src"].replace("img/s.gif", "X").replace("img/w.gif", "W").replace("img/l.gif", "L") for x in cols_img]
+
+        index = 0
+        for i in range(len(text)):
+            # If in our text string we have a "" value, fill in as one of the wins/losses/absences
+            if text[i] == "":
+                text[i] = img[index]
+                index += 1
+            # Replace \xa0 with "" (not necessary, can be done in post)
+            elif text[i] == "\xa0":
+                text[i] = ""
+
+        data += [text]
+
+    sumo_database["win_loss_matrix"][year_month] = data
+
+end_time = time.time()
+print(str(round((end_time - start_time)/60, 1)) + " mins elapsed")
+# 91.6 mins elapsed
+
+# Write full dictionary to JSON
+with open("sumo_database_full.json", "w") as f:
+    json.dump(sumo_database, f)
+
+# Create dataframe. Win/loss matrices have different dimensions
+# pd.DataFrame will adapt to the largest columns (filling blanks as NaNs)
+win_loss_matrix = pd.DataFrame()
+for year_month in sumo_database["years_months"]:
+    if sumo_database["win_loss_matrix"][year_month] is None:
+        continue
+    else:
+        win_loss_temp = []
+        for matrix in sumo_database["win_loss_matrix"][year_month]:
+            win_loss_temp += [[year_month] + matrix]
+
+    win_loss_temp = pd.DataFrame(win_loss_temp)
+    # Set colnames as the first row read in, this will allow us to map and append different dimension dataframes
+    colnames = win_loss_temp.iloc[0]
+    # Rename year_month and blank columns
+    colnames[0] = "Year_Month"; colnames[1] = "Index_1"; colnames[len(colnames) - 1] = "Index_2"
+    # Rename columns and drop the first row read in
+    win_loss_temp.rename(columns=colnames, inplace=True); win_loss_temp.drop(win_loss_temp.index[0], inplace=True)
+
+    win_loss_matrix = win_loss_matrix.append(win_loss_temp)
+
+# Reorder columns
+colnames = win_loss_matrix.columns.to_list()
+colnames = [x for x in colnames if x not in ["JW", "JL", "Index_2"]] + ["JW", "JL", "Index_2"]
+
+# Replace NaNs (and "\xa0") values with ""
+win_loss_matrix = win_loss_matrix[colnames].fillna(value="").replace("\xa0", "")
+
+# Write to csv
+win_loss_matrix.to_csv("sumo_win_loss_matrix_full.csv", index=False)

@@ -23,6 +23,7 @@ Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the 
 		* Match results
 		* Overall tournament results
 		* Rikishi (sumo wrestler) stats
+		* Makuuchi (highest division) win loss matrices
 
 * **sumo_maches_full.csv**
 
@@ -31,6 +32,10 @@ Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the 
 * **sumo_banzuke_full.csv**
 
 	* Containing the results of all sumo tournaments from 1757-10 to 2022-09 (all divisions up to 1909-01, makuuchi division only from 1909-06 to 2022-09), and rikishi (sumo wrestler) stats.
+	
+* **sumo_win_loss_matrix_full.csv**
+
+	* All available win/loss matrices for the Makuuchi (highest) division.
 
 This is useful as there currently doesn't exist any tabulated data for this large a collection of results (only done by day or by basho).
 
