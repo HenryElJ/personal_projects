@@ -10,6 +10,8 @@ Completed all 40 exercises from [Practice Python](https://www.practicepython.org
 
 ### Sumo Database
 
+#### sumo_database.py
+
 Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the banzuke (overall tournament results) and torikumi (daily basho results). Data has been exported as both the JSON and cleaned + tabulated CSV:
 
 * **sumo_database_full.json**
@@ -38,6 +40,10 @@ Web scraping [Sumo Reference](https://sumodb.sumogames.de/Default.aspx) for the 
 	* All available win/loss matrices for the Makuuchi (highest) division.
 
 This is useful as there currently doesn't exist any tabulated data for this large a collection of results (only done by day or by basho).
+
+#### sumo_analysis.py
+
+Attempting to predict sumo matches from the webscraped data. Primarily using sumo_maches_full.csv and sumo_banzuke_full.csv.
 
 ## R
 
